@@ -984,8 +984,11 @@
     </section>
 
     <footer>
-        <p>&copy; 2025 Data Analyst Portfolio. Built with Python & Passion.</p>
+        <h1>© <span id="year"></span> Naman | Data • Automation • Python</h1>
     </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
     <script>
         // Generate stars
