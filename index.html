@@ -90,7 +90,7 @@
             position: fixed;
             top: 0;
             width: 100%;
-            padding: 1.5rem 0;
+            padding: 0rem 0;
             background: rgba(10, 14, 39, 0.85);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(0, 217, 255, 0.1);
@@ -99,7 +99,7 @@
         }
 
         nav.scrolled {
-            padding: 1rem 0;
+            padding: 0rem 0;
             background: rgba(10, 14, 39, 0.95);
             box-shadow: 0 10px 40px rgba(0, 217, 255, 0.1);
         }
@@ -114,12 +114,12 @@
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 4rem;
             font-weight: 700;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
         }
 
         nav ul {
@@ -213,6 +213,7 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
+            padding-right: 250px;
         }
 
         .hero-content {
@@ -384,7 +385,8 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 6rem 3rem;
+            padding: 6rem 3rem 6rem 3rem;
+            padding-right: 250px;
         }
 
         /* Section Titles */
@@ -664,6 +666,7 @@
         @media (max-width: 1024px) {
             .hero-container {
                 grid-template-columns: 1fr;
+                padding-right: 3rem;
             }
 
             .hero h1 {
@@ -676,6 +679,10 @@
 
             .side-nav {
                 display: none;
+            }
+
+            .container {
+                padding-right: 3rem;
             }
         }
 
@@ -718,8 +725,8 @@
     <div class="data-viz" id="dataViz"></div>
 
     <nav id="navbar">
-        <div class="nav-container">
-            <div class="logo">DataAnalyst.py</div>
+        <div class="nav-container">          
+            <div class="logo">Naman Goel</div>
         </div>
     </nav>
 
@@ -734,7 +741,7 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <span class="hero-tag">📊 Data Analyst & Automation Expert</span>
+            
                 <h1>Transforming Data into <span class="highlight">Actionable Insights</span></h1>
                 <p class="hero-description">
                     Specialized in Python-based data analysis, automation, and building intelligent solutions 
@@ -781,11 +788,11 @@
                     <div class="skill-tags">
                         <span class="skill-tag">Pandas</span>
                         <span class="skill-tag">NumPy</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">Flask</span>
+                        
+                        
                     </div>
                 </div>
-                <div class="skill-card reveal">
+                <!-- <div class="skill-card reveal">
                     <div class="skill-icon">📊</div>
                     <h3>Data Visualization</h3>
                     <p>Creating compelling visual stories from complex datasets using modern visualization tools.</p>
@@ -795,8 +802,8 @@
                         <span class="skill-tag">Plotly</span>
                         <span class="skill-tag">Power BI</span>
                     </div>
-                </div>
-                <div class="skill-card reveal">
+                </div> -->
+                <!-- <div class="skill-card reveal">
                     <div class="skill-icon">🤖</div>
                     <h3>Automation & ETL</h3>
                     <p>Building automated data pipelines and workflows to streamline data processing tasks.</p>
@@ -806,7 +813,7 @@
                         <span class="skill-tag">Apache Airflow</span>
                         <span class="skill-tag">APIs</span>
                     </div>
-                </div>
+                </div> -->
                 <div class="skill-card reveal">
                     <div class="skill-icon">💾</div>
                     <h3>Database Management</h3>
@@ -814,11 +821,11 @@
                     <div class="skill-tags">
                         <span class="skill-tag">SQL</span>
                         <span class="skill-tag">PostgreSQL</span>
-                        <span class="skill-tag">MongoDB</span>
+                        
                         <span class="skill-tag">SQLite</span>
                     </div>
                 </div>
-                <div class="skill-card reveal">
+                <!-- <div class="skill-card reveal">
                     <div class="skill-icon">📈</div>
                     <h3>Statistical Analysis</h3>
                     <p>Applying statistical methods and machine learning to extract meaningful insights.</p>
@@ -828,15 +835,15 @@
                         <span class="skill-tag">A/B Testing</span>
                         <span class="skill-tag">Regression</span>
                     </div>
-                </div>
+                </div> -->
                 <div class="skill-card reveal">
                     <div class="skill-icon">📋</div>
                     <h3>Business Intelligence</h3>
                     <p>Translating complex data into actionable business insights and recommendations.</p>
                     <div class="skill-tags">
-                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">PowerBI</span>
                         <span class="skill-tag">Excel</span>
-                        <span class="skill-tag">KPI Tracking</span>
+                        <!-- <span class="skill-tag">KPI Tracking</span> -->
                         <span class="skill-tag">Reports</span>
                     </div>
                 </div>
@@ -854,7 +861,7 @@
                 </p>
             </div>
             <div class="projects-grid">
-                <div class="project-card reveal">
+                <!-- <div class="project-card reveal">
                     <div class="project-image">📊</div>
                     <div class="project-content">
                         <span class="project-category">Data Analysis</span>
@@ -867,8 +874,8 @@
                             <span class="tech-tag">SQL</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-card reveal">
+                </div> -->
+                <!-- <div class="project-card reveal">
                     <div class="project-image">🤖</div>
                     <div class="project-content">
                         <span class="project-category">Automation</span>
@@ -881,8 +888,8 @@
                             <span class="tech-tag">MongoDB</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-card reveal">
+                </div> -->
+                <!-- <div class="project-card reveal">
                     <div class="project-image">📈</div>
                     <div class="project-content">
                         <span class="project-category">Machine Learning</span>
@@ -895,7 +902,7 @@
                             <span class="tech-tag">Pandas</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="project-card reveal">
                     <div class="project-image">⚙️</div>
                     <div class="project-content">
@@ -910,7 +917,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card reveal">
+                <!-- <div class="project-card reveal">
                     <div class="project-image">💹</div>
                     <div class="project-content">
                         <span class="project-category">Financial Analysis</span>
@@ -923,8 +930,8 @@
                             <span class="tech-tag">NumPy</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-card reveal">
+                </div> -->
+                <!-- <div class="project-card reveal">
                     <div class="project-image">🌐</div>
                     <div class="project-content">
                         <span class="project-category">Web Application</span>
@@ -937,7 +944,7 @@
                             <span class="tech-tag">REST API</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -955,23 +962,23 @@
                 <div class="contact-card reveal">
                     <div class="contact-icon">📧</div>
                     <h3>Email</h3>
-                    <p><a href="mailto:analyst@example.com">analyst@example.com</a></p>
+                    <p><a href="mailto:Naman.Goel.in@gmail.com">Naman.Goel.in@gmail.com</a></p>
                 </div>
                 <div class="contact-card reveal">
                     <div class="contact-icon">💼</div>
                     <h3>LinkedIn</h3>
-                    <p><a href="#" target="_blank">linkedin.com/in/yourprofile</a></p>
+                    <p><a href="https://www.linkedin.com/in/naman-goel-364050250" target="_blank">LinkedIn_Link</a></p>
                 </div>
                 <div class="contact-card reveal">
                     <div class="contact-icon">🐙</div>
                     <h3>GitHub</h3>
-                    <p><a href="#" target="_blank">github.com/yourusername</a></p>
+                    <p><a href="https://github.com/namangoelin-git" target="_blank">Github_Link</a></p>
                 </div>
-                <div class="contact-card reveal">
+                <!-- <div class="contact-card reveal">
                     <div class="contact-icon">📊</div>
                     <h3>Kaggle</h3>
                     <p><a href="#" target="_blank">kaggle.com/yourprofile</a></p>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
