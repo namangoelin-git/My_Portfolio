@@ -109,12 +109,12 @@
             margin: 0 auto;
             padding: 0 3rem;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
         }
 
         .logo {
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 700;
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
@@ -123,9 +123,63 @@
         }
 
         nav ul {
+            display: none;
+        }
+
+        /* Side Navigation */
+        .side-nav {
+            position: fixed;
+            right: 3rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
             display: flex;
-            gap: 3rem;
-            list-style: none;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .side-nav a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.5rem 1rem;
+            text-align: right;
+        }
+
+        .side-nav a::before {
+            content: '';
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+
+        .side-nav a:hover {
+            color: var(--primary);
+        }
+
+        .side-nav a:hover::before {
+            border-color: var(--primary);
+            background: var(--primary);
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        .side-nav a.active {
+            color: var(--primary);
+        }
+
+        .side-nav a.active::before {
+            border-color: var(--primary);
+            background: var(--primary);
+            box-shadow: 0 0 15px var(--primary);
         }
 
         nav a {
@@ -161,7 +215,7 @@
             min-height: 100vh;
             display: flex;
             align-items: center;
-            padding: 6rem 3rem 3rem;
+            padding: 10rem 3rem 3rem;
         }
 
         .hero-container {
@@ -631,6 +685,10 @@
             .projects-grid {
                 grid-template-columns: 1fr;
             }
+
+            .side-nav {
+                display: none;
+            }
         }
 
         @media (max-width: 768px) {
@@ -673,15 +731,17 @@
 
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">Er_Naman Goel</div>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="logo">DataAnalyst.py</div>
         </div>
     </nav>
+
+    <!-- Side Navigation -->
+    <div class="side-nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
 
     <section id="home" class="hero">
         <div class="hero-container">
@@ -975,6 +1035,28 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // Side nav active state on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.side-nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
         });
 
         // Scroll reveal animation
