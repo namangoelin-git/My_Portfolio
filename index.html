@@ -251,9 +251,35 @@
             background: linear-gradient(135deg, #ffffff, var(--primary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            white-space: nowrap;
+        }
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        .hero h1 .highlight {
+        .subtitle {
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.7);  /* slightly transparent */
+            margin-top: -1rem;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            letter-spacing: 1px;
+            font-weight: bold; 
+            
+        }
+
+        .hero h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.8rem;
+            line-height: 1;
+            background: linear-gradient(135deg, #ffffff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero h3 .highlight {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -334,6 +360,7 @@
             padding: 2rem;
             backdrop-filter: blur(20px);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin-top: -300px;
         }
 
         .code-header {
@@ -421,6 +448,7 @@
             color: rgba(255, 255, 255, 0.6);
             max-width: 600px;
             margin: 0 auto;
+            font-style: italic;
         }
 
         /* Skills Grid */
@@ -728,7 +756,7 @@
 
     <nav id="navbar">
         <div class="nav-container">          
-            <div class="logo">Naman Goel</div>
+            <div class="logo">Welcome🎉</div>
         </div>
     </nav>
 
@@ -744,13 +772,20 @@
         <div class="hero-container">
             <div class="hero-content">
             
-                <h1>Transforming Data into <span class="highlight">Actionable Insights</span></h1>
+                <h1><span class="highlight">Er.Naman Goel </span></h1>
+                <p class="subtitle">Data Analyst & Automation Specialist</p>
+                <h3>• MS Excel/ Google sheet<span class="highlight"></span></h3>
+                <h3>• SQL & DB<span class="highlight"></span></h3>
+                <h3>• Python<span class="highlight"></span></h3>
+                <h3>• Automation<span class="highlight"></span></h3>
                 <p class="hero-description">
-                    Specialized in Python-based data analysis, automation, and building intelligent solutions 
-                    that drive business decisions through data-driven storytelling.
+                    Specialized in Python-based data analysis and automation, with expertise in handling diverse datasets. Passionate about transforming manual data processes into efficient automated solutions that save time and reduce errors..
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <p class="section-description">
+                    Open to full-time opportunities and freelance projects. Whether you're an organization or individual, let's explore how data can drive your success.
+                </p>
+                    <!-- <a href="#projects" class="btn-primary">View Projects</a> -->
                     <a href="#contact" class="btn-secondary">Get in Touch</a>
                 </div>
             </div>
@@ -778,7 +813,7 @@
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-tag">EXPERTISE</span>
-                <h2 class="section-title">Technical Skills</h2>
+                <h3 class="section-title">Technical Skills</h3>
                 <p class="section-description">
                     Comprehensive skill set in data analysis, automation, and building scalable solutions
                 </p>
@@ -861,7 +896,7 @@
         <div class="container">
             <div class="section-header reveal">
                 <span class="section-tag">PORTFOLIO</span>
-                <h2 class="section-title">Featured Projects</h2>
+                <h3 class="section-title">Featured Projects</h3>
                 <p class="section-description">
                     Real-world data analysis and automation projects showcasing practical solutions
                 </p>
@@ -960,7 +995,7 @@
         <div class="container contact-section">
             <div class="section-header reveal">
                 <span class="section-tag">LET'S CONNECT</span>
-                <h2 class="section-title">Get In Touch</h2>
+                <h3 class="section-title">Get In Touch</h3>
                 <p class="section-description">
                     Interested in collaboration or have a project in mind? Let's discuss how data can drive your success.
                 </p>
