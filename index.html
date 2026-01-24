@@ -763,10 +763,11 @@
                     </div>
                     <div class="code-content">
                         <span class="code-line"><span class="keyword">import</span> <span class="function">pandas</span> <span class="keyword">as</span> pd</span>
-                        <span class="code-line"><span class="keyword">import</span> <span class="function">numpy</span> <span class="keyword">as</span> np</span>
+                        <!-- <span class="code-line"><span class="keyword">import</span> <span class="function">numpy</span> <span class="keyword">as</span> np</span>
                         <span class="code-line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> <span class="function">model_selection</span></span>
-                        <span class="code-line"><span class="comment"># Analyzing data patterns...</span></span>
+                        <span class="code-line"><span class="comment"># Analyzing data patterns...</span></span> -->
                         <span class="code-line">df = pd.<span class="function">read_csv</span>(<span class="string">'data.csv'</span>)</span>
+                        <span class="code-line">df.<span class="function">to_csv</span>(<span class="string">input_file + "_delta.csv", index=False</span>)</span>
                     </div>
                 </div>
             </div>
